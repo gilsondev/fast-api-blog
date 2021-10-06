@@ -3,11 +3,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get('/')
+@app.get("/")
 def index():
-    return {'data': {'name': 'Carlos'}}
+    return {"data": {"name": "Carlos"}}
 
 
-@app.get('/about')
-def about():
-    return {'data': 'about page'}
+@app.get("/about/{id}")
+def about(id):
+    return {"data": id}
